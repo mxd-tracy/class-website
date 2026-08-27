@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZJUT IST 2503 - 班级资料共享平台</title>
+  <meta name="description" content="浙江工业大学智能科学与技术 2503 班级资料共享平台，提供班级的资源共享。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <!-- 左侧导航：网站名和栏目 -->
+      <div class="brand">
+        <a class="brand-link" href="#home">
+          <h1>ZJUT IST 2503</h1>
+          <p>Zhejiang University of Technology</p>
+        </a>
+      </div>
+      <div class="hairline"></div>
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item active" type="button" data-view="home">
+          <i data-lucide="home"></i><span>首页</span>
+        </button>
+        <button class="nav-item" type="button" data-view="intro">
+          <i data-lucide="users"></i><span>班级介绍</span>
+        </button>
+        <button class="nav-item" type="button" data-view="honors">
+          <i data-lucide="award"></i><span>班级荣誉</span>
+        </button>
+        <button class="nav-item" type="button" data-view="notices">
+          <i data-lucide="megaphone"></i><span>班级公告</span>
+        </button>
+        <button class="nav-item" type="button" data-view="schedule">
+          <i data-lucide="calendar-days"></i><span>课程表</span>
+        </button>
+        <button class="nav-item" type="button" data-view="resources">
+          <i data-lucide="folder-open"></i><span>资料中心</span>
+        </button>
+      </nav>
+      <div class="external">
+        <p>外部链接</p>
+        <a href="https://pan.quark.cn/" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="external-link"></i><span>夸克网盘</span>
+        </a>
+      </div>
+      <div class="hairline"></div>
+      <div class="sidebar-foot">
+        <p>创建者 · 班级管理员</p>
+        <p>2025 级 智能科学与技术</p>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="打开导航" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <h2 id="viewTitle">首页</h2>
+        <span class="topbar-tag">ZJUT IST 2503</span>
+      </header>
+
+      <div class="content">
+        <!-- ===== 首页 ===== -->
+        <section class="view active" data-view="home" id="home">
+          <div class="hero">
+            <div class="hero-copy">
+              <p class="hero-eyebrow">Zhejiang University of Technology · Archive</p>
+              <h1 class="hero-title">
+                IST 2503<br>
+                <span>Nexus</span>
+              </h1>
+              <p class="hero-desc">
+                <!-- 首页介绍文字，想改就改这里 -->
+                浙江工业大学智能科学与技术 2503 资料共享平台<br>
+                提供班级的资源共享
+              </p>
+            </div>
+            <div class="hero-orbit" aria-hidden="true">
+              <div class="orbit-ring orbit-r1"></div>
+              <div class="orbit-ring orbit-r2"></div>
+              <div class="orbit-ring orbit-r3"></div>
+              <div class="orbit-ring orbit-r4"></div>
+              <span class="orbit-wave wave-1"></span>
+              <span class="orbit-wave wave-2"></span>
+              <span class="orbit-wave wave-3"></span>
+              <span class="orbit-wave wave-4"></span>
+              <div class="orbit-body orbit-r1"><i></i></div>
+              <div class="orbit-body orbit-r2"><i></i></div>
+              <div class="orbit-body orbit-r3"><i></i></div>
+              <div class="orbit-body orbit-r4"><i></i></div>
+              <span class="orbit-core"></span>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <article class="panel">
+              <div class="panel-head"><i data-lucide="users"></i><h3>班级简介</h3></div>
+              <!-- 班级简介文字，改这里 -->
+              <p>这里是浙江工业大学智能科学与技术 2503 班的资料共享平台，用于分享学习资料、班级通知与集体荣誉。</p>
+              <button class="link-btn" type="button" data-goto="intro">查看班级介绍 <i data-lucide="arrow-right"></i></button>
+            </article>
+            <article class="panel">
+              <div class="panel-head"><i data-lucide="megaphone"></i><h3>最新公告</h3></div>
+              <!-- 最新公告内容，改这里 -->
+              <ul class="mini-list">
+                <li><time>09/02</time><span>新学期资料已更新</span></li>
+                <li><time>08/30</time><span>班级平台正式上线</span></li>
+              </ul>
+              <button class="link-btn" type="button" data-goto="notices">查看全部公告 <i data-lucide="arrow-right"></i></button>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== 班级介绍 ===== -->
+        <section class="view" data-view="intro" id="intro">
+          <div class="page-head">
+            <p class="eyebrow">About</p>
+            <h2>班级介绍</h2>
+          </div>
+          <div class="info-grid">
+            <div class="info-item"><span>班级名称</span><strong>智能科学与技术 2503 班</strong></div>
+            <div class="info-item"><span>所属学院</span><strong>浙江工业大学</strong></div>
+            <div class="info-item"><span>班级编号</span><strong>2503</strong></div>
+            <div class="info-item"><span>班主任</span><strong>待补充</strong></div>
+            <div class="info-item"><span>辅导员</span><strong>待补充</strong></div>
+            <div class="info-item"><span>班级人数</span><strong>待补充</strong></div>
+          </div>
+          <article class="panel">
+            <div class="panel-head"><i data-lucide="info"></i><h3>班级概况</h3></div>
+            <!-- 班级概况文字，改这里 -->
+            <p>班级概况文字待补充。这里可以放一段关于班级的介绍，例如班级成立时间、专业方向、班级文化等。</p>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><i data-lucide="flag"></i><h3>班级口号</h3></div>
+            <!-- 班级口号，改这里 -->
+            <p>班级口号待补充。</p>
+          </article>
+        </section>
+
+        <!-- ===== 班级荣誉 ===== -->
+        <section class="view" data-view="honors" id="honors">
+          <div class="page-head">
+            <p class="eyebrow">Honors</p>
+            <h2>班级荣誉</h2>
+          </div>
+          <div class="honor-grid">
+            <article class="honor-card">
+              <span class="honor-year">2026</span>
+              <!-- 荣誉名称和详情，改这里 -->
+              <h3>示例荣誉名称</h3>
+              <p>荣誉详情待补充，例如竞赛获奖、优秀班集体、奖学金等。</p>
+            </article>
+            <article class="honor-card">
+              <span class="honor-year">2025</span>
+              <h3>示例荣誉名称</h3>
+              <p>荣誉详情待补充。</p>
+            </article>
+            <article class="honor-card">
+              <span class="honor-year">2025</span>
+              <h3>示例荣誉名称</h3>
+              <p>荣誉详情待补充。</p>
+            </article>
+            <article class="honor-card">
+              <span class="honor-year">待补充</span>
+              <h3>示例荣誉名称</h3>
+              <p>荣誉详情待补充。</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== 班级公告 ===== -->
+        <section class="view" data-view="notices" id="notices">
+          <div class="page-head">
+            <p class="eyebrow">Notices</p>
+            <h2>班级公告</h2>
+          </div>
+          <div class="notice-list">
+            <article class="notice-item">
+              <div class="notice-meta">
+                <!-- 公告分类和日期，改这里 -->
+                <span class="tag important">重要</span>
+                <time>2026-09-02</time>
+              </div>
+              <!-- 公告标题和内容，改这里 -->
+              <h3>新学期资料已更新</h3>
+              <p>示例公告内容，正式内容待补充。</p>
+            </article>
+            <article class="notice-item">
+              <div class="notice-meta">
+                <span class="tag">通知</span>
+                <time>2026-08-30</time>
+              </div>
+              <h3>班级平台正式上线</h3>
+              <p>示例公告内容，正式内容待补充。</p>
+            </article>
+            <article class="notice-item">
+              <div class="notice-meta">
+                <span class="tag event">活动</span>
+                <time>2026-08-20</time>
+              </div>
+              <h3>示例活动通知</h3>
+              <p>示例公告内容，正式内容待补充。</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== 课程表 ===== -->
+        <section class="view" data-view="schedule" id="schedule">
+          <div class="page-head">
+            <p class="eyebrow">Schedule</p>
+            <h2>课程表</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>节次</th>
+                  <th>周一</th>
+                  <th>周二</th>
+                  <th>周三</th>
+                  <th>周四</th>
+                  <th>周五</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">第 1-2 节</td>
+                  <!-- 课程表格子，把“待填写”改成课程名称 -->
+                  <td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td>
+                </tr>
+                <tr>
+                  <td class="time">第 3-4 节</td>
+                  <td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td>
+                </tr>
+                <tr>
+                  <td class="time">第 5-6 节</td>
+                  <td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td>
+                </tr>
+                <tr>
+                  <td class="time">第 7-8 节</td>
+                  <td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td>
+                </tr>
+                <tr>
+                  <td class="time">第 9-10 节</td>
+                  <td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td><td>待填写</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===== 资料中心 ===== -->
+        <section class="view" data-view="resources" id="resources">
+          <div class="page-head">
+            <p class="eyebrow">Resources</p>
+            <h2>资料中心</h2>
+          </div>
+          <div class="resource-note">
+            <i data-lucide="cloud"></i>
+            <p>所有资料存放在夸克网盘中，点击下方按钮前往对应文件夹。</p>
+          </div>
+          <div class="resource-grid">
+            <article class="resource-card">
+              <span class="type">课程资料</span>
+              <!-- 资料名称和夸克分享链接，改这里 -->
+              <h3>专业课程资料</h3>
+              <p>课程课件、教材与学习资料汇总。</p>
+              <a class="btn" href="https://pan.quark.cn/" target="_blank" rel="noopener noreferrer">
+                夸克网盘下载 <i data-lucide="external-link"></i>
+              </a>
+            </article>
+            <article class="resource-card">
+              <span class="type">作业模板</span>
+              <h3>作业与实验模板</h3>
+              <p>作业模板、实验报告模板等。</p>
+              <a class="btn" href="https://pan.quark.cn/" target="_blank" rel="noopener noreferrer">
+                夸克网盘下载 <i data-lucide="external-link"></i>
+              </a>
+            </article>
+            <article class="resource-card">
+              <span class="type">复习资料</span>
+              <h3>考前复习资料</h3>
+              <p>复习重点、往年资料与习题解答。</p>
+              <a class="btn" href="https://pan.quark.cn/" target="_blank" rel="noopener noreferrer">
+                夸克网盘下载 <i data-lucide="external-link"></i>
+              </a>
+            </article>
+            <article class="resource-card">
+              <span class="type">班务文件</span>
+              <h3>班级文件</h3>
+              <p>班级表格、通讯录与其他常用文件。</p>
+              <a class="btn" href="https://pan.quark.cn/" target="_blank" rel="noopener noreferrer">
+                夸克网盘下载 <i data-lucide="external-link"></i>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
